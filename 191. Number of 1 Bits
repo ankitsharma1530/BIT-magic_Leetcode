@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int count=0;
+        uint32_t check=1;
+        for(int i=0;i<32;i++){
+            if((n&check)!=0){
+                count++;
+            }
+            check=check<<1;
+        }
+        return count;
+    }
+};
